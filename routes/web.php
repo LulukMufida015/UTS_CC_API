@@ -16,8 +16,11 @@
 $router->get('/', 'ExampleController@index');
 
 // Presensi
-$router->group(['prefix' => 'assets'], function () use ($router) {
-    $router->get('image', 'ExampleController@getImage');
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->get('intro', 'ExampleController@intro');
+    $router->get('work', 'ExampleController@work');
+    $router->get('about', 'ExampleController@about');
+    $router->get('contact', 'ExampleController@contact');
 });
 
 
